@@ -74,7 +74,7 @@ for col in ["precio_compra", "precio_venta_publico", "stock"]:
     print("Desviación estándar:", doc[col].std())
 
 # ===================== CONEXIÓN A MONGODB ATLAS =====================
-uri = "mongodb+srv://admin_productos:1234qwer@clusterproductos.o1jmgy5.mongodb.net/?retryWrites=true&w=majority"
+uri = "mongodb+srv://USUARIO:CONTRASEÑA@clusterproductos.o1jmgy5.mongodb.net/?retryWrites=true&w=majority"
 client = MongoClient(uri)
 
 db = client["inventario"]
@@ -130,3 +130,4 @@ print(
     "Productos 500–599 en MongoDB:",
     coleccion.count_documents({"_id": {"$gte": 500, "$lte": 599}})
 )
+
